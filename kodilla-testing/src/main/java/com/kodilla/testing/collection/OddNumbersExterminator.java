@@ -5,6 +5,18 @@ import java.util.List;
 
 public class OddNumbersExterminator {
     ArrayList<Integer> evenNumbersList = new ArrayList<>();
+    ArrayList<Integer> oddNumbersList = new ArrayList<>();
+    ArrayList<Integer> numbers = new ArrayList<>();
+
+    public ArrayList<Integer> getEvenNumbersList() {
+        return evenNumbersList;
+    }
+    public ArrayList<Integer> getOddNumbersList() {
+        return oddNumbersList;
+    }
+    public ArrayList<Integer> getNumbers() {
+        return numbers;
+    }
 
     public List<Integer> exterminate(List<Integer> numbers) {
 
@@ -15,8 +27,14 @@ public class OddNumbersExterminator {
             if (element % 2 == 0) {
 
                 evenNumbersList.add(element);
+                System.out.println(evenNumbersList.size());
+            } else {
+                if (element % 2 != 0) {
+                    oddNumbersList.add(element);
+                }
             }
         }
         return evenNumbersList;
+
     }
 }
