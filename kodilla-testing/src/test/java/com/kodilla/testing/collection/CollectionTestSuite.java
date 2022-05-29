@@ -42,7 +42,7 @@ class CollectionTestSuite {
             //numbers.add(1,2);
 
             OddNumbersExterminator example = new OddNumbersExterminator();
-            example.exterminate(numbers);
+
 
             //When
             List<Integer>  evenNumbersList = example.exterminate(numbers);
@@ -69,14 +69,12 @@ class CollectionTestSuite {
         numbers.add(5,6);
 
         OddNumbersExterminator example = new OddNumbersExterminator();
-        example.exterminate(numbers);
+
 
         //When
         List<Integer>  evenNumbersList = example.exterminate(numbers);
-        List<Integer> result = evenNumbersList;
-        //System.out.println(result);
-        System.out.println("Testing " + result);
+        System.out.println("Testing " + evenNumbersList);
         //Then
-        assertEquals(Arrays.asList(2, 4, 6), result);
+        assertEquals(Arrays.asList(2, 4, 6), evenNumbersList);
     }
 }
