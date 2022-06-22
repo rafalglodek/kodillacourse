@@ -12,11 +12,9 @@ class SecondChallengeTestSuit {
         SecondChallenge secondChallenge = new SecondChallenge();
         // when & then
         assertAll(
-                () -> assertThrows(SecondException.class, () -> secondChallenge.probablyIWillThrowException(1,1.5)),
-                () -> assertThrows(SecondException.class, () -> secondChallenge.probablyIWillThrowException(2,1.5))
+                () -> assertThrows(SecondException.class, () -> secondChallenge.probablyIWillThrowException(3,3)),
+                () -> assertThrows(SecondException.class, () -> secondChallenge.probablyIWillThrowException(2,3)),
+                () -> assertDoesNotThrow(() -> secondChallenge.probablyIWillThrowException(1,3))
         );
     }
-
-
-
 }
