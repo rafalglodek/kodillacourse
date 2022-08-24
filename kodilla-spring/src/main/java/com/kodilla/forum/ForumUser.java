@@ -15,4 +15,3 @@ public class ForumUser {
         return username;
     }
 }
-14.1. bean ForumUser
