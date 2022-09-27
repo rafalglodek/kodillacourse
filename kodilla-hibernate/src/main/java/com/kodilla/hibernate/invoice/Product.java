@@ -5,8 +5,8 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "PRODUCT")
 public class Product {
-    int id;
-    String name;
+    private int id;
+    private  String name;
     private Item item;
 
     public Product() {
