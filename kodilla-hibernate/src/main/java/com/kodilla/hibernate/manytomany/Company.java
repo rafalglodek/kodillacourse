@@ -7,9 +7,14 @@ import java.util.List;
 
 @NamedNativeQuery(
         name = "Company.retrieveCompaniesWithNameEquals",
-        query = "SELECT NAMES , LEFT(NAME, 3) AS EXTRACTEDSTRING" +
+        query = "SELECT * FROM companies WHERE SUBSTRING(COMPANY_NAME, 1,3) = :NAME",
+/*        query = "SELECT COMPANY_NAME , LEFT(COMPANY_NAME, 3) AS EXTRACTEDSTRING" +
                 " FROM COMPANIES" +
                 " WHERE LEFT(NAME, 3) = 'Dat'",
+
+ */
+
+
         resultClass = Company.class
 )
 

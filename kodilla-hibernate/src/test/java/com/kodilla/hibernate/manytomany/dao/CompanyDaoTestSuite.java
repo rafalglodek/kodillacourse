@@ -52,7 +52,7 @@ class CompanyDaoTestSuite {
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
         List<Employee> ExampleEmployeeSmith = employeeDao.retrieveLastname("Smith");
-        List<Company> ExampleCompanydat = companyDao.retrieveCompaniesWithNameEquals();
+        List<Company> ExampleCompanydat = companyDao.retrieveCompaniesWithNameEquals("Dat");
 
 
         //Then
@@ -64,13 +64,13 @@ class CompanyDaoTestSuite {
 
 
         //CleanUp
-        //try {
-        //    companyDao.deleteById(softwareMachineId);
-        //    companyDao.deleteById(dataMaestersId);
-        //    companyDao.deleteById(greyMatterId);
-        //} catch (Exception e) {
-        //    //do nothing
-        //}
+        try {
+            companyDao.deleteById(softwareMachineId);
+            companyDao.deleteById(dataMastersId);
+            companyDao.deleteById(greyMatterId);
+        } catch (Exception e) {
+            //do nothing
+        }
     }
 
 }
