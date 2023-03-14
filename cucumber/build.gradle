@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+    id "se.thinkcode.cucumber-runner" version "0.0.8"
+}
+
+group 'com.kodilla'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+apply plugin: 'java'
+tasks.withType(JavaCompile) {
+    options.compilerArgs.addAll()
+}
+
+dependencies {
+    //implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    //implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.3.2'
+
+
+    implementation'org.apache.logging.log4j:log4j-core:2.20.0'
+    implementation('org.apache.logging.log4j:log4j-slf4j-impl:2.20.0')
+    implementation('org.apache.logging.log4j:log4j-1.2-api:2.20.0')
+
+    testImplementation 'io.cucumber:cucumber-junit:6.10.4'
+    testImplementation 'io.cucumber:cucumber-java:6.10.4'
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.7.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testImplementation 'org.testng:testng:7.1.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.projectlombok:lombok:1.18.22'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumberCli() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', 'html:target/cucumber-report.html',
+                    '--glue', 'com.baeldung.cucumber',
+                    'src/test/resources']
+        }
+    }
+}
