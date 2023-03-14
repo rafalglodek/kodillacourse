@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FlightFinder {
 
-    void findFlight(Flight flight) throws RouteNotFoundException {
+    void findFlight(Flight flight) throws RouteNotFoundException { //never thrown
         try {
             Flight parisLondon = new Flight("Paris", "London");
             Flight londonParis = new Flight("London", "Paris");
@@ -19,21 +19,31 @@ public class FlightFinder {
 
                 if ((entry.getKey().getDepartureAirport().equals(flight.getDepartureAirport())) &&
                         (entry.getKey().getArrivalAirport().equals(flight.getArrivalAirport())) &&
-                        (entry.getValue() == true)) {
-                    System.out.println("You can fly from " + entry.getKey().getDepartureAirport()+" "+entry.getKey().getArrivalAirport());
-                } else throw new RouteNotFoundException();
+                        (entry.getValue())) {
+                    System.out.println("You can fly from " + entry.getKey().getDepartureAirport() + " to " + entry.getKey().getArrivalAirport());
+                } else {
+                    if ((!(entry.getKey().getDepartureAirport().equals(flight.getDepartureAirport())) ||
+                            !(entry.getKey().getArrivalAirport().equals(flight.getArrivalAirport())) ||
+                            (!entry.getValue()))) {
+                        System.out.println("You can not fly to " + (flight.getArrivalAirport()));
+                    }
+                }
+                throw new RouteNotFoundException();
+
             }
-        } catch (RouteNotFoundException e) {
+        } catch (RouteNotFoundException e) {  //empty catch
+            System.out.println("Hello from catch");
         }
     }
+
     public static void main(String[] args) {
 
         FlightFinder flightFinder = new FlightFinder();
 
         try {
-         flightFinder.findFlight(new Flight("London", "Paris"));
-        } catch (Exception e) {
+            flightFinder.findFlight(new Flight("London", "Paris"));
 
+        } catch (Exception e) {  //empty catch
         }
     }
 }
