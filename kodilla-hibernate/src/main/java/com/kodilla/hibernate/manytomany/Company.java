@@ -25,8 +25,12 @@ public class Company {
     private int id;
     private String name;
     private List<Employee> employees = new ArrayList<>();
-
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "JOIN_TABLE_NAME",
+            joinColumns = {@JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "COMPANY_ID")},
+                    inverseJoinColumns = {@JoinColumn(name = "COMPANY_ID", referencedColumnName = "EMPLOYEE_ID")}
+            )
     public List<Employee> getEmployees() {
         return employees;
     }
