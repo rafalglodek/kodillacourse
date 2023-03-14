@@ -7,6 +7,3 @@ public class RpsRunner {
         new Logic().play();
      }
 }
-
-
-
