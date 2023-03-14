@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 public class SegwayRentalService implements RentalService {
     @Override
     public boolean rent(User user, LocalDateTime from, LocalDateTime to) {
+
         return true;
     }
 }
