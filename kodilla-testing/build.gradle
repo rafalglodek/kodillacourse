@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    // testCompile to testImplementation
     // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '4.6.0'
 

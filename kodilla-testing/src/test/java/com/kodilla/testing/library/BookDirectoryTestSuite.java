@@ -90,7 +90,6 @@ class BookDirectoryTestSuite {
     }
     @Test
     void testListBooksInHandsOf() {
-
         // Given
         LibraryUser libraryUser = new LibraryUser("Adam","Smith","1234");
         LibraryUser libraryUser1 = new LibraryUser("Adam1","Smith","1234");
@@ -115,6 +114,5 @@ class BookDirectoryTestSuite {
         assertEquals(0, theListOfBooks0.size());
         assertEquals(1, theListOfBooks1.size());
         assertEquals(5, theListOfBooks5.size());
-
     }
 }

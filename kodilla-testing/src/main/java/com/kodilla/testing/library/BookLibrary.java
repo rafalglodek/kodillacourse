@@ -20,14 +20,9 @@ public class BookLibrary {
         return bookList;
     }
 
-
-
         public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
         List<Book> resultList1 = libraryDatabase.listBooksInHandsOf(libraryUser);
-            if (libraryUser.equals(LibraryUser.class)) return resultList1;
-
             return resultList1;
         }
-
 
 }
