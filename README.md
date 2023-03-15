@@ -1,6 +1,6 @@
 # Kodillacourse: 
 # 
-This is a repository with exercises made during course and coding I have done on my own utilising <a href="https://github.com/rafalglodek/kodillacourse/tree/master/cucumber">Selenium WebDriver.</a>
+This is a repository with exercises made during course and coding I have done on my own utilising <a href="https://github.com/rafalglodek/kodillacourse/commit/f285829ef2730f66b16195b2b051870bda30b39e">Selenium WebDriver.</a>
 ##
 
 1. Core Java: Exceptions handling, Lambda expression, Stream
