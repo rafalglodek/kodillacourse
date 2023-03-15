@@ -1,15 +1,16 @@
 # kodillacourse: 
-# Some header 1
+# 
 This is a repository with exercises made during course and coding I have done on my own utilising <a href="https://github.com/rafalglodek/kodillacourse/tree/master/cucumber">Selenium WebDriver.</a>.
-## Some header 2
-* Core Java: Exceptions handling, Lambda expression, Stream
+##
 
-*Design patterns: Adapter, Builder, Decorator, Facade, Factory, Observer, Prototype, Singleton, Strategy
+1. Core Java: Exceptions handling, Lambda expression, Stream
 
-*Testing: Unit tests (JUnit, Mockito), Integration tests (Selenium, Cucumber)
+2. Design patterns: Adapter, Builder, Decorator, Facade, Factory, Observer, Prototype, Singleton, Strategy
 
-*Spring: Beans, Components, Dependency Injection
+3. Testing: Unit tests (JUnit, Mockito), Integration tests (Selenium, Cucumber)
 
-*Hibernate: Entities, Entity relationship, HQL, Named Queries
+4. Spring: Beans, Components, Dependency Injection
 
-*Design principles: SOLID, DRY, Clean code
+5. Hibernate: Entities, Entity relationship, HQL, Named Queries
+
+6. Design principles: SOLID, DRY, Clean code
