@@ -2,42 +2,14 @@
 
 This is a repository with exercises made during Kodilla course.
 
-Core Java:
+Core Java: Exceptions handling, Lambda expression, Stream
 
-Exceptions handling
-Lambda expression
-Stream
+Design patterns: Adapter, Builder, Decorator, Facade, Factory, Observer, Prototype, Singleton, Strategy
 
-Design patterns:
+Testing: Unit tests (JUnit, Mockito), Integration tests (Selenium, Cucumber)
 
-Adapter
-Builder
-Decorator
-Facade
-Factory
-Observer
-Prototype
-Singleton
-Strategy
+Spring: Beans, Components, Dependency Injection
 
-Testing:
+Hibernate: Entities, Entity relationship, HQL, Named Queries
 
-Unit tests (JUnit, Mockito)
-Integration tests (Selenium)
-
-Spring:
-
-Beans
-Components
-Dependency Injection
-Hibernate:
-
-Entities
-
-Entity relationship
-HQL, Named Queries
-Design principles:
-
-SOLID
-DRY
-Clean code
+Design principles: SOLID, DRY, Clean code
